@@ -1,8 +1,8 @@
 ﻿namespace SportClub.Models
 {
-    public class Timetable
+    public class Shedule
     {
         public int Id { get; set; }
-        public List<TimeT> timetable { get; set; }
+        public Training Training { get; set; }
     }
 }
