@@ -12,7 +12,7 @@ namespace SportClub.Models
         {
             if (Database.EnsureCreated())
             {
-                string pass = "qwerty";
+                string pass = "Qwerty-123";
                 byte[] saltbuf = new byte[16];
                 RandomNumberGenerator randomNumberGenerator = RandomNumberGenerator.Create();
                 randomNumberGenerator.GetBytes(saltbuf);
@@ -24,16 +24,23 @@ namespace SportClub.Models
                 s.salt = salt;
                 string password = salt + pass;
                 string hashedPassword = BCrypt.Net.BCrypt.HashPassword(password);
-                User u = new User { Name = "admin", Password = hashedPassword, Level = 2, Age = "27", email = "asd@gmail.com" };
+                User u = new User { Name = "Elena", Login = "admin", Password = hashedPassword, Status = "admin", DateOfBirth = "27-11-2002", Email = "asd@gmail.com",Phone="0971234567", Sex="female" };
                 Users.Add(u);
                 SaveChanges();
                 s.user = u;
-                Salts.Add(s);
-                SaveChanges();
+                Salts.Add(s);              
                 SaveChanges();
             }
         }
         public DbSet<User> Users { get; set; }
         public DbSet<Salt> Salts { get; set; }
+        public DbSet<Speciality> Specialitys { get; set; }
+        public DbSet<Post> Posts { get; set; }
+        public DbSet<Group> Groups { get; set; }
+        public DbSet<Room> Rooms { get; set; }
+        public DbSet<Training> Trainings { get; set; }
+        public DbSet<TimeT> Times { get; set; }
+        public DbSet<Shedule> Shedules { get; set; }
+        public DbSet<TypeOfTraining> TypeOfTrainings { get; set; }
     }
 }
