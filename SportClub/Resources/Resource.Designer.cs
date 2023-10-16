@@ -671,7 +671,14 @@ namespace Resources {
                 return ResourceManager.GetString("Registration", resourceCulture);
             }
         }
-        
+        public static string Required
+        {
+            get
+            {
+                return ResourceManager.GetString("Required", resourceCulture);
+            }
+        }
+
         /// <summary>
         ///   Looks up a localized string similar to Название песни.
         /// </summary>

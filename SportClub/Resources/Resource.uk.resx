@@ -321,6 +321,9 @@
   <data name="Registration" xml:space="preserve">
     <value>Зареєструватися</value>
   </data>
+  <data name="Required" xml:space="preserve">
+    <value>Обов'язкове поле</value>
+  </data>
   <data name="Songname" xml:space="preserve">
     <value>Назва пісні</value>
   </data>

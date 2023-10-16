@@ -21,7 +21,7 @@ namespace SportClub.Controllers
         public IActionResult Registration()
         {
             HttpContext.Session.SetString("path", Request.Path);
-            return View();
+            return View("Register");
         }
 
         [HttpPost]

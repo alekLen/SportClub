@@ -321,6 +321,9 @@
   <data name="Registration" xml:space="preserve">
     <value>Registgration</value>
   </data>
+  <data name="Required" xml:space="preserve">
+    <value>is Required</value>
+  </data>
   <data name="Songname" xml:space="preserve">
     <value>Song's name</value>
   </data>

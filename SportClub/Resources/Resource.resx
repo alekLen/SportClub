@@ -321,11 +321,17 @@
   <data name="Registration" xml:space="preserve">
     <value>Зарегестрироваться</value>
   </data>
+  <data name="Required" xml:space="preserve">
+    <value>Обязательное поле</value>
+  </data>
   <data name="Songname" xml:space="preserve">
     <value>Название песни</value>
   </data>
   <data name="Sort" xml:space="preserve">
     <value>Сортировать пo:</value>
+  </data>
+  <data name="String1" xml:space="preserve">
+    <value />
   </data>
   <data name="Style" xml:space="preserve">
     <value>Жанр</value>

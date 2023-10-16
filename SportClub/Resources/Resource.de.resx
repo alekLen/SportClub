@@ -321,6 +321,9 @@
   <data name="Registration" xml:space="preserve">
     <value>Registrieren</value>
   </data>
+  <data name="Required" xml:space="preserve">
+    <value>ist ein Pflichtfeld</value>
+  </data>
   <data name="Songname" xml:space="preserve">
     <value>Name des Liedes</value>
   </data>
