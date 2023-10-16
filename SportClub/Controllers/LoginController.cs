@@ -118,14 +118,15 @@ namespace SportClub.Controllers
             if (ModelState.IsValid)
             {
                 User u = await db.Users.FirstOrDefaultAsync(m => m.Login == user.Login);
+                if(u==null)
                 {
-
-                    if (u != null)
+                    Admin a= await db.Admins.FirstOrDefaultAsync(m => m.Login == user.Login);
+                    if(a!=null)
                     {
-                        if (await CheckPassword(u, user.Password))
+                        if (await CheckPasswordA(a, user.Password))
                         {
-                            HttpContext.Session.SetString("login", user.Login);                            
-                                HttpContext.Session.SetString("client", "client");
+                            HttpContext.Session.SetString("login", user.Login);
+                            HttpContext.Session.SetString("admin", "admin");
                             return RedirectToAction("Index", "Home");
                         }
                         else
@@ -136,10 +137,42 @@ namespace SportClub.Controllers
                     }
                     else
                     {
-                        ModelState.AddModelError("", "логин или пароль неверные");
-                        return View(user);
+                        Coach c = await db.Coaches.FirstOrDefaultAsync();
+                        if (c != null)
+                        {
+                            if (await CheckPasswordC(c, user.Password))
+                            {
+                                HttpContext.Session.SetString("login", user.Login);
+                                HttpContext.Session.SetString("coach", "coach");
+                                return RedirectToAction("Index", "Home");
+                            }
+                            else
+                            {
+                                ModelState.AddModelError("", "логин или пароль неверные");
+                                return View(user);
+                            }
+                        }
+                        else
+                        {
+                            ModelState.AddModelError("", "логин или пароль неверные");
+                            return View(user);
+                        }
                     }
-                }
+                }           
+                else
+                {
+                        if (await CheckPasswordU(u, user.Password))
+                        {
+                            HttpContext.Session.SetString("login", user.Login);                            
+                                HttpContext.Session.SetString("client", "client");
+                            return RedirectToAction("Index", "Home");
+                        }
+                        else
+                        {
+                            ModelState.AddModelError("", "логин или пароль неверные");
+                            return View(user);
+                        }
+                 }              
             }
             return View(user);
         }
@@ -195,7 +228,7 @@ namespace SportClub.Controllers
                 return Json(true);
             }
         }
-        public async Task<bool> CheckPassword(User u, string p)
+        public async Task<bool> CheckPasswordU(User u, string p)
         {
             var us = new User
             {
@@ -205,6 +238,38 @@ namespace SportClub.Controllers
                
             };
             Salt s = await db.Salts.FirstOrDefaultAsync(m => m.user == us);
+            string conf = s.salt + p;
+            if (BCrypt.Net.BCrypt.Verify(conf, us.Password))
+                return true;
+            else
+                return false;
+        }
+        public async Task<bool> CheckPasswordA(Admin u, string p)
+        {
+            var us = new Admin
+            {
+                Id = u.Id,
+                Login = u.Login,
+                Password = u.Password,
+
+            };
+            Salt s = await db.Salts.FirstOrDefaultAsync(m => m.admin == us);
+            string conf = s.salt + p;
+            if (BCrypt.Net.BCrypt.Verify(conf, us.Password))
+                return true;
+            else
+                return false;
+        }
+        public async Task<bool> CheckPasswordC(Coach u, string p)
+        {
+            var us = new Coach
+            {
+                Id = u.Id,
+                Login = u.Login,
+                Password = u.Password,
+
+            };
+            Salt s = await db.Salts.FirstOrDefaultAsync(m => m.coach == us);
             string conf = s.salt + p;
             if (BCrypt.Net.BCrypt.Verify(conf, us.Password))
                 return true;
