@@ -257,7 +257,13 @@ namespace Resources {
                 return ResourceManager.GetString("Confirmregistration", resourceCulture);
             }
         }
-        
+        public static string DateB
+        {
+            get
+            {
+                return ResourceManager.GetString("DateB", resourceCulture);
+            }
+        }
         /// <summary>
         ///   Looks up a localized string similar to Удалить.
         /// </summary>
@@ -311,7 +317,14 @@ namespace Resources {
                 return ResourceManager.GetString("download", resourceCulture);
             }
         }
-        
+        public static string Dopname
+        {
+            get
+            {
+                return ResourceManager.GetString("Dopname", resourceCulture);
+            }
+        }
+
         /// <summary>
         ///   Looks up a localized string similar to Отредактирован исполнитель: .
         /// </summary>
@@ -428,7 +441,13 @@ namespace Resources {
                 return ResourceManager.GetString("enterName", resourceCulture);
             }
         }
-        
+        public static string female
+        {
+            get
+            {
+                return ResourceManager.GetString("female", resourceCulture);
+            }
+        }
         /// <summary>
         ///   Looks up a localized string similar to *заполните все поля.
         /// </summary>
@@ -482,7 +501,13 @@ namespace Resources {
                 return ResourceManager.GetString("Forward", resourceCulture);
             }
         }
-        
+        public static string gender
+        {
+            get
+            {
+                return ResourceManager.GetString("gender", resourceCulture);
+            }
+        }
         /// <summary>
         ///   Looks up a localized string similar to Жанры.
         /// </summary>
@@ -581,7 +606,13 @@ namespace Resources {
                 return ResourceManager.GetString("LogRequired", resourceCulture);
             }
         }
-        
+        public static string man
+        {
+            get
+            {
+                return ResourceManager.GetString("man", resourceCulture);
+            }
+        }
         /// <summary>
         ///   Looks up a localized string similar to Музыкальный портал.
         /// </summary>
@@ -599,7 +630,14 @@ namespace Resources {
                 return ResourceManager.GetString("nameArt", resourceCulture);
             }
         }
-        
+        public static string Name
+        {
+            get
+            {
+                return ResourceManager.GetString("Name", resourceCulture);
+            }
+        }
+
         /// <summary>
         ///   Looks up a localized string similar to Новые пользователи.
         /// </summary>
@@ -653,7 +691,13 @@ namespace Resources {
                 return ResourceManager.GetString("passwordConf", resourceCulture);
             }
         }
-        
+        public static string Phone
+        {
+            get
+            {
+                return ResourceManager.GetString("Phone", resourceCulture);
+            }
+        }
         /// <summary>
         ///   Looks up a localized string similar to Загрузите фото.
         /// </summary>
@@ -714,7 +758,14 @@ namespace Resources {
                 return ResourceManager.GetString("StyleSort", resourceCulture);
             }
         }
-        
+        public static string Surname
+        {
+            get
+            {
+                return ResourceManager.GetString("Surname", resourceCulture);
+            }
+        }
+
         /// <summary>
         ///   Looks up a localized string similar to Текст.
         /// </summary>

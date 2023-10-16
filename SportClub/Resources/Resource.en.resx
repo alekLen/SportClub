@@ -183,6 +183,9 @@
   <data name="Confirmregistration" xml:space="preserve">
     <value>Confirm registration</value>
   </data>
+  <data name="DateB" xml:space="preserve">
+    <value>Date of Birth</value>
+  </data>
   <data name="Delete" xml:space="preserve">
     <value>Delete</value>
   </data>
@@ -197,6 +200,9 @@
   </data>
   <data name="DelSong" xml:space="preserve">
     <value>Song has been removed:  </value>
+  </data>
+  <data name="Dopname" xml:space="preserve">
+    <value>Surname</value>
   </data>
   <data name="download" xml:space="preserve">
     <value>Download</value>
@@ -240,6 +246,9 @@
   <data name="enterName" xml:space="preserve">
     <value>Enter the name</value>
   </data>
+  <data name="female" xml:space="preserve">
+    <value>female</value>
+  </data>
   <data name="fields" xml:space="preserve">
     <value>*enter all fields</value>
   </data>
@@ -257,6 +266,9 @@
   </data>
   <data name="Forward" xml:space="preserve">
     <value>Forward</value>
+  </data>
+  <data name="gender" xml:space="preserve">
+    <value>Gender</value>
   </data>
   <data name="Genres" xml:space="preserve">
     <value>Genres</value>
@@ -291,8 +303,14 @@
   <data name="LogRequired" xml:space="preserve">
     <value>*login is required</value>
   </data>
+  <data name="man" xml:space="preserve">
+    <value>male</value>
+  </data>
   <data name="MusicPortal" xml:space="preserve">
     <value>Music Portal</value>
+  </data>
+  <data name="Name" xml:space="preserve">
+    <value>Name</value>
   </data>
   <data name="nameArt" xml:space="preserve">
     <value>Name</value>
@@ -315,6 +333,9 @@
   <data name="passwordConf" xml:space="preserve">
     <value>confirm password</value>
   </data>
+  <data name="Phone" xml:space="preserve">
+    <value>Telephone</value>
+  </data>
   <data name="Photo" xml:space="preserve">
     <value>Photo</value>
   </data>
@@ -335,6 +356,9 @@
   </data>
   <data name="StyleSort" xml:space="preserve">
     <value>genre</value>
+  </data>
+  <data name="Surname" xml:space="preserve">
+    <value>Surname</value>
   </data>
   <data name="Text" xml:space="preserve">
     <value>Text</value>

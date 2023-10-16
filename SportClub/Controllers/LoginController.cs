@@ -3,12 +3,15 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.ModelBinding;
 using Microsoft.EntityFrameworkCore;
 using NuGet.Protocol.Plugins;
+using SportClub.Filters;
 using SportClub.Models;
 using System.Security.Cryptography;
 using System.Text;
 
 namespace SportClub.Controllers
 {
+
+    [Culture]
     public class LoginController : Controller
     {
         SportClubContext db;
@@ -102,7 +105,7 @@ namespace SportClub.Controllers
                 catch { }
                 return RedirectToAction("Login");
             }
-            return View(user);
+            return View("Register",user);
         }
         public async Task<IActionResult> Login()
         {

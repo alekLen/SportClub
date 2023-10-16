@@ -54,7 +54,7 @@
             </div>
         }
         @using Microsoft.AspNetCore.Http
-         @if (Context.Session.GetString("client") != null)
+        @if (Context.Session.GetString("client") != null || Context.Session.GetString("admin") != null || Context.Session.GetString("coach") != null)
         {
             @using (Html.BeginForm("Logout", "Login", FormMethod.Get))
             {

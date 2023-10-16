@@ -5,10 +5,12 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
+using SportClub.Filters;
 using SportClub.Models;
 
 namespace SportClub.Controllers
 {
+    [Culture]
     public class UsersController : Controller
     {
         private readonly SportClubContext _context;

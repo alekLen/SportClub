@@ -183,6 +183,9 @@
   <data name="Confirmregistration" xml:space="preserve">
     <value>Подтвердить регистрацию</value>
   </data>
+  <data name="DateB" xml:space="preserve">
+    <value>Дата рождения</value>
+  </data>
   <data name="Delete" xml:space="preserve">
     <value>Удалить</value>
   </data>
@@ -197,6 +200,9 @@
   </data>
   <data name="DelSong" xml:space="preserve">
     <value>Была удалена песня:  </value>
+  </data>
+  <data name="Dopname" xml:space="preserve">
+    <value>Отчество</value>
   </data>
   <data name="download" xml:space="preserve">
     <value>Загрузить</value>
@@ -240,6 +246,9 @@
   <data name="enterName" xml:space="preserve">
     <value>Введите название</value>
   </data>
+  <data name="female" xml:space="preserve">
+    <value>женский</value>
+  </data>
   <data name="fields" xml:space="preserve">
     <value>*заполните все поля</value>
   </data>
@@ -257,6 +266,9 @@
   </data>
   <data name="Forward" xml:space="preserve">
     <value>Вперед</value>
+  </data>
+  <data name="gender" xml:space="preserve">
+    <value>Пол</value>
   </data>
   <data name="Genres" xml:space="preserve">
     <value>Жанры</value>
@@ -291,8 +303,14 @@
   <data name="LogRequired" xml:space="preserve">
     <value>*логин обязательное поле</value>
   </data>
+  <data name="man" xml:space="preserve">
+    <value>мужской</value>
+  </data>
   <data name="MusicPortal" xml:space="preserve">
     <value>Музыкальный портал</value>
+  </data>
+  <data name="Name" xml:space="preserve">
+    <value>Имя</value>
   </data>
   <data name="nameArt" xml:space="preserve">
     <value>Имя</value>
@@ -314,6 +332,9 @@
   </data>
   <data name="passwordConf" xml:space="preserve">
     <value>подтвердите пароль</value>
+  </data>
+  <data name="Phone" xml:space="preserve">
+    <value>Телефон</value>
   </data>
   <data name="Photo" xml:space="preserve">
     <value>Загрузите фото</value>
@@ -338,6 +359,9 @@
   </data>
   <data name="StyleSort" xml:space="preserve">
     <value>жанрам</value>
+  </data>
+  <data name="Surname" xml:space="preserve">
+    <value>Фамилия</value>
   </data>
   <data name="Text" xml:space="preserve">
     <value>Текст</value>
