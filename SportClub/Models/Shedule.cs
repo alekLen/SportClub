@@ -3,6 +3,6 @@
     public class Shedule
     {
         public int Id { get; set; }
-        public Training Training { get; set; }
+        public List<Training> training { get; set; }
     }
 }

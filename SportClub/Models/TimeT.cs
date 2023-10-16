@@ -4,6 +4,6 @@
     {
         public int Id { get; set; }
         public string Time { get; set; } = string.Empty;
-        public bool IsEnabled { get; set; }
+       // public bool IsEnabled { get; set; }
     }
 }

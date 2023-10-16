@@ -158,5 +158,14 @@ namespace SportClub.Controllers
         {
             return (_context.Users?.Any(e => e.Id == id)).GetValueOrDefault();
         }
+        public async Task<IActionResult> GetClients()
+        {
+            HttpContext.Session.SetString("path", Request.Path);
+          
+            IEnumerable<User> s = await _context.Users.ToListAsync();
+           
+           // ViewBag.Users = s;
+            return View("Clients",s);
+        }
     }
 }

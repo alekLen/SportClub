@@ -24,15 +24,17 @@ namespace SportClub.Models
                 s.salt = salt;
                 string password = salt + pass;
                 string hashedPassword = BCrypt.Net.BCrypt.HashPassword(password);
-                User u = new User { Name = "Elena", Login = "admin", Password = hashedPassword, Status = "admin", DateOfBirth = "27-11-2002", Email = "asd@gmail.com",Phone="0971234567", Sex="female" };
-                Users.Add(u);
+               Admin a = new Admin { Name = "Elena",Surname="Alekseeva", Login = "admin", Password = hashedPassword,  DateOfBirth = "27-11-2002", Email = "asd@gmail.com",Phone="0971234567", Gender="female" };
+                Admins.Add(a);
                 SaveChanges();
-                s.user = u;
+                s.admin = a;
                 Salts.Add(s);              
                 SaveChanges();
             }
         }
         public DbSet<User> Users { get; set; }
+        public DbSet<Admin> Admins { get; set; }
+        public DbSet<Coach> Coaches { get; set; }
         public DbSet<Salt> Salts { get; set; }
         public DbSet<Speciality> Specialitys { get; set; }
         public DbSet<Post> Posts { get; set; }
@@ -42,5 +44,6 @@ namespace SportClub.Models
         public DbSet<TimeT> Times { get; set; }
         public DbSet<Shedule> Shedules { get; set; }
         public DbSet<TypeOfTraining> TypeOfTrainings { get; set; }
+        public DbSet<Timetable> timetables { get; set; }
     }
 }

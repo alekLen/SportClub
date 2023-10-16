@@ -46,12 +46,33 @@ namespace SportClub.Models
         /* [Remote("IsEmailInUse", "Login", ErrorMessageResourceType = typeof(Resources.Resource),
                  ErrorMessageResourceName = "emailused")]*/
         [Remote("IsEmailInUse", "Login", ErrorMessageResourceName = "email уже зарегестрирован")]
-        public string? email { get; set; }
-     /*   [Required(ErrorMessageResourceType = typeof(Resources.Resource),
-                 ErrorMessageResourceName = "AgeRequired")]
-        [Display(Name = "age", ResourceType = typeof(Resources.Resource))]
-        [Remote("CheckAge", "Login", ErrorMessageResourceType = typeof(Resources.Resource),
-                 ErrorMessageResourceName = "unage")]
-        public string? age { get; set; }*/
+        public string? Email { get; set; }
+        /*   [Required(ErrorMessageResourceType = typeof(Resources.Resource),
+                    ErrorMessageResourceName = "AgeRequired")]
+           [Display(Name = "age", ResourceType = typeof(Resources.Resource))]
+           [Remote("CheckAge", "Login", ErrorMessageResourceType = typeof(Resources.Resource),
+                    ErrorMessageResourceName = "unage")]
+           public string? age { get; set; }*/
+        [Required(ErrorMessageResourceName = "Обязательное поле")]
+        [Display(Name = "Date of birth ")]
+        public string? DateOfBirth { get; set; }
+        [Required(ErrorMessageResourceName = "Обязательное поле")]
+        [Display(Name = "Phone number")]
+        [RegularExpression(@"\(\d{3}\)-\d{3} \d{2} \d{2}", ErrorMessage = "Введите номер в формате (097)-111 11 11")]
+        public string? Phone { get; set; }
+        [Required(ErrorMessageResourceName = "Обязательное поле")]     
+        public string Gender {  get; set; }
+        [Required(ErrorMessageResourceName = "Обязательное поле")]
+        [Display(Name = "Имя")]
+        [RegularExpression("^[a-zA-Z]+$", ErrorMessage = "Поле 'Имя' должно содержать только буквы.")]
+        public string Name { get; set; }
+        [Required(ErrorMessageResourceName = "Обязательное поле")]
+        [Display(Name = "Фамилию")]
+        [RegularExpression("^[a-zA-Z]+$", ErrorMessage = "Поле 'Имя' должно содержать только буквы.")]
+        public string Surname { get; set; }
+        [Required(ErrorMessageResourceName = "Обязательное поле")]
+        [RegularExpression("^[a-zA-Z]+$", ErrorMessage = "Поле 'Имя' должно содержать только буквы.")]
+        [Display(Name = "Отчество")]
+        public string Dopname { get; set; }
     }
 }
