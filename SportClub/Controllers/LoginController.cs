@@ -398,6 +398,60 @@ namespace SportClub.Controllers
             await putSpecialities();
             return View("Speciality");
         }
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> AddSpeciality(string name)
+        {
+            HttpContext.Session.SetString("path", Request.Path);
+            try
+            {
+                Speciality sp = new();
+                sp.Name = name;
+                db.Specialitys.Add(sp);
+                await db.SaveChangesAsync();
+                return RedirectToAction("Index", "Home");
+            }
+            catch
+            {
+                await putPosts();
+                return View("Speciality");
+            }
+        }
+        public async Task<IActionResult> EditSpeciality(int id)
+        {
+            HttpContext.Session.SetString("path", Request.Path);
+            Speciality sp = await db.Specialitys.FirstOrDefaultAsync(m => m.Id == id);
+            if (sp != null)
+            {              
+                return View("EditSpeciality",sp);
+            }
+            await putSpecialities();
+            return View("Speciality");
+        }
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> EditSpeciality(int id,string name)
+        {
+            HttpContext.Session.SetString("path", Request.Path);
+            try
+            {
+                Speciality sp = await db.Specialitys.FirstOrDefaultAsync(m => m.Id == id);
+                if(sp == null)
+                {
+                    await putSpecialities();
+                    return View("Speciality");
+                }
+                sp.Name = name;
+                db.Specialitys.Update(sp);
+                await db.SaveChangesAsync();
+                return RedirectToAction("Index", "Home");
+            }
+            catch
+            {
+                await putSpecialities();
+                return View("Speciality");
+            }
+        }
         public async Task putPosts()
         {
             HttpContext.Session.SetString("path", Request.Path);
