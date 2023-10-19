@@ -201,6 +201,9 @@
   <data name="DelSong" xml:space="preserve">
     <value>Була видалена пісня:  </value>
   </data>
+  <data name="Description" xml:space="preserve">
+    <value>Опис</value>
+  </data>
   <data name="Dopname" xml:space="preserve">
     <value>По-батькові</value>
   </data>
@@ -339,6 +342,9 @@
   <data name="Photo" xml:space="preserve">
     <value>Завантажте фото</value>
   </data>
+  <data name="Post" xml:space="preserve">
+    <value>Посада</value>
+  </data>
   <data name="Registration" xml:space="preserve">
     <value>Зареєструватися</value>
   </data>
@@ -350,6 +356,9 @@
   </data>
   <data name="Sort" xml:space="preserve">
     <value>Сортувати за:</value>
+  </data>
+  <data name="Speciality" xml:space="preserve">
+    <value>Спеціальність</value>
   </data>
   <data name="Style" xml:space="preserve">
     <value>Жанр</value>

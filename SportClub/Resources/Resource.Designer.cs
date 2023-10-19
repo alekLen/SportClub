@@ -308,7 +308,14 @@ namespace Resources {
                 return ResourceManager.GetString("DelSong", resourceCulture);
             }
         }
-        
+        public static string Description
+        {
+            get
+            {
+                return ResourceManager.GetString("Description", resourceCulture);
+            }
+        }
+
         /// <summary>
         ///   Looks up a localized string similar to Загрузить.
         /// </summary>
@@ -706,7 +713,14 @@ namespace Resources {
                 return ResourceManager.GetString("Photo", resourceCulture);
             }
         }
-        
+        public static string Post
+        {
+            get
+            {
+                return ResourceManager.GetString("Post", resourceCulture);
+            }
+        }
+
         /// <summary>
         ///   Looks up a localized string similar to Зарегестрироваться.
         /// </summary>
@@ -740,7 +754,14 @@ namespace Resources {
                 return ResourceManager.GetString("Sort", resourceCulture);
             }
         }
-        
+        public static string Speciality
+        {
+            get
+            {
+                return ResourceManager.GetString("Speciality", resourceCulture);
+            }
+        }
+
         /// <summary>
         ///   Looks up a localized string similar to Жанр.
         /// </summary>

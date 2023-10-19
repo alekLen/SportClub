@@ -201,6 +201,9 @@
   <data name="DelSong" xml:space="preserve">
     <value>Lied wurde entfernt:  </value>
   </data>
+  <data name="Description" xml:space="preserve">
+    <value>Beschreibung</value>
+  </data>
   <data name="Dopname" xml:space="preserve">
     <value>Nachname</value>
   </data>
@@ -339,6 +342,9 @@
   <data name="Photo" xml:space="preserve">
     <value>Lade ein Foto hochо</value>
   </data>
+  <data name="Post" xml:space="preserve">
+    <value>Berufsbezeichnung</value>
+  </data>
   <data name="Registration" xml:space="preserve">
     <value>Registrieren</value>
   </data>
@@ -350,6 +356,9 @@
   </data>
   <data name="Sort" xml:space="preserve">
     <value>Sortieren nach:</value>
+  </data>
+  <data name="Speciality" xml:space="preserve">
+    <value>Spezialität</value>
   </data>
   <data name="Style" xml:space="preserve">
     <value>Genre</value>
