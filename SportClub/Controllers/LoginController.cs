@@ -392,6 +392,54 @@ namespace SportClub.Controllers
                 return View("Post");
             }
         }
+        public async Task<IActionResult> EditPost(int id)
+        {
+            HttpContext.Session.SetString("path", Request.Path);
+            Post p = await db.Posts.FirstOrDefaultAsync(m => m.Id == id);
+            if (p != null)
+            {
+                return View("EditPost", p);
+            }
+            await putPosts();
+            return View("Post");
+        }
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> EditPost(int id, string name)
+        {
+            HttpContext.Session.SetString("path", Request.Path);
+            try
+            {
+                Post p = await db.Posts.FirstOrDefaultAsync(m => m.Id == id);
+                if (p == null)
+                {
+                    await putPosts();
+                    return View("Post");
+                }
+                p.Name = name;
+                db.Posts.Update(p);
+                await db.SaveChangesAsync();
+                return RedirectToAction("Index", "Home");
+            }
+            catch
+            {
+                await putSpecialities();
+                return View("Speciality");
+            }
+        }
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> DeletePost(int id)
+        {
+            HttpContext.Session.SetString("path", Request.Path);
+            Post p = await db.Posts.FirstOrDefaultAsync(m => m.Id == id);
+            if (p != null)
+            {
+                return View("DeletePost", p);
+            }
+            await putPosts();
+            return View("Post");
+        }
         public async Task<IActionResult> AddSpeciality()
         {
             HttpContext.Session.SetString("path", Request.Path);
